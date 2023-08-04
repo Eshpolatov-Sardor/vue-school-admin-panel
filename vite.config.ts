@@ -1,4 +1,5 @@
 import path from "path";
+import { URL, fileURLToPath } from "url";
 import { defineConfig } from "vite";
 import Preview from "vite-plugin-vue-component-preview";
 import Vue from "@vitejs/plugin-vue";
@@ -19,9 +20,12 @@ import VueMacros from "unplugin-vue-macros/vite";
 
 export default defineConfig({
     resolve: {
-        alias: {
-            "~/": `${path.resolve(__dirname, "src")}/`,
-        },
+        alias: [
+            {
+                find: "@/",
+                replacement: `${fileURLToPath(new URL("./src", import.meta.url))}`,
+            },
+        ],
     },
 
     plugins: [

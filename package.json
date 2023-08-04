@@ -16,6 +16,8 @@
         "up": "taze major -I"
     },
     "dependencies": {
+        "@headlessui/vue": "^1.7.14",
+        "@heroicons/vue": "^2.0.18",
         "@unocss/reset": "^0.49.0",
         "@vueuse/core": "^9.11.1",
         "@vueuse/head": "^1.0.23",
