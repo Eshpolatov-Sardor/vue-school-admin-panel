@@ -4,6 +4,7 @@
         "@antfu"
     ],
     "rules": {
+        "curly": "off",
         "no-tabs": [
             "error"
         ],
