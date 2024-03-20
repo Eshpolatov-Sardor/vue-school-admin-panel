@@ -1,33 +1,43 @@
 <script setup lang="ts">
-    const { t, availableLocales, locale } = useI18n();
+import { availableLocales, loadLanguageAsync } from "@/modules/i18n"
 
-    const toggleLocales = () => {
-        // change to some real logic
-        const locales = availableLocales;
-        locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length];
-    };
+const { t, locale } = useI18n()
+
+async function toggleLocales() {
+	// change to some real logic
+	const locales = availableLocales
+	const newLocale = locales[(locales.indexOf(locale.value) + 1) % locales.length]
+	await loadLanguageAsync(newLocale)
+	locale.value = newLocale
+}
 </script>
 
 <template>
-    <nav text-xl mt-6>
-        <RouterLink class="icon-btn mx-2" to="/" :title="t('button.home')">
-            <div i-carbon-campsite />
-        </RouterLink>
+	<nav class="flex gap-4 mt-6 justify-center text-xl">
+		<RouterLink class="icon-btn" to="/" :title="t('button.home')">
+			<span class="i-carbon-campsite" />
+		</RouterLink>
 
-        <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
-            <div i="carbon-sun dark:carbon-moon" />
-        </button>
+		<button class="icon-btn" :title="t('button.toggle_dark')" @click="toggleDark()">
+			<span class="i-carbon-sun dark:i-carbon-moon" />
+		</button>
 
-        <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales()">
-            <div i-carbon-language />
-        </a>
+		<a class="icon-btn" :title="t('button.toggle_langs')" @click="toggleLocales()">
+			<span class="i-carbon-language" />
+		</a>
 
-        <RouterLink class="icon-btn mx-2" to="/about" :title="t('button.about')">
-            <div i-carbon-dicom-overlay />
-        </RouterLink>
+		<RouterLink class="icon-btn" to="/about" :title="t('button.about')" data-test-id="about">
+			<span class="i-carbon-dicom-overlay" />
+		</RouterLink>
 
-        <a class="icon-btn mx-2" rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank" title="GitHub">
-            <div i-carbon-logo-github />
-        </a>
-    </nav>
+		<a class="icon-btn" rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank" title="GitHub">
+			<div class="i-carbon-logo-github" />
+		</a>
+	</nav>
 </template>
+
+<style>
+.icon-btn {
+	@apply inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600;
+}
+</style>

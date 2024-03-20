@@ -1,4 +1,5 @@
 # Vue 3 + Vite project template of Foreach.Soft Ltd.
+
 #### Shamelessly copied from Vitesse but configured little bit
 
 ## Features
@@ -42,7 +43,6 @@
 - ☁️ Deploy on Netlify, zero-config
 
 <br>
-
 
 ## Pre-packed
 
