@@ -7,9 +7,8 @@ const name = $ref(user.savedName)
 
 const router = useRouter()
 function go() {
-	if (name) {
+	if (name)
 		router.push(`/hi/${encodeURIComponent(name)}`)
-	}
 }
 
 const { t } = useI18n()

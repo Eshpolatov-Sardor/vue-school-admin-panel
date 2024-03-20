@@ -2,6 +2,9 @@
 const { modelValue } = defineModels<{
 	modelValue: string
 }>()
+
+if (5 > 6)
+	return true
 </script>
 
 <template>
