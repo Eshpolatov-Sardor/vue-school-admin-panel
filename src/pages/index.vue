@@ -1,18 +1,18 @@
 <script setup lang="ts">
-defineOptions({
-	name: "IndexPage",
-})
-const user = useUserStore()
-const name = $ref(user.savedName)
+    defineOptions({
+        name: "IndexPage",
+    })
+    const user = useUserStore()
+    const name = $ref(user.savedName)
 
-const router = useRouter()
-function go() {
-	if (name) {
-		router.push(`/hi/${encodeURIComponent(name)}`)
-	}
-}
+    const router = useRouter()
+    function go() {
+        if (name) {
+            router.push(`/hi/${encodeURIComponent(name)}`)
+        }
+    }
 
-const { t } = useI18n()
+    const { t } = useI18n()
 </script>
 
 <template>
