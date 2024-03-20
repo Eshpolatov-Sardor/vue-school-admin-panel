@@ -7,6 +7,9 @@ export default antfu(
 		stylistic: {
 			indent: "tab",
 			quotes: "double",
+			overrides: {
+				curly: ["error", "multi-line"],
+			},
 		},
 	},
 )
