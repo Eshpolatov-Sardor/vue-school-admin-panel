@@ -2,21 +2,19 @@
 import antfu from "@antfu/eslint-config"
 
 export default antfu(
-	{
-		formatters: true,
-		stylistic: {
-			indent: "tab",
-			quotes: "double",
-			overrides: {
-				curly: ["error", "multi-line"],
-
-			},
-		},
-	},
-	{
-		rules: {
-			"style/indent": "off",
-			"vue/script-indent": ["error", 4, { baseIndent: 1 }],
-		},
-	},
+  {
+    formatters: true,
+    stylistic: {
+      quotes: "double",
+      overrides: {
+        curly: ["error", "all"],
+      },
+    },
+    vue: {
+      overrides: {
+        "vue/script-indent": ["error", 2, { baseIndent: 1 }],
+        "style/indent": "off",
+      },
+    },
+  },
 )
