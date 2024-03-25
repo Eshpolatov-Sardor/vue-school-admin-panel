@@ -2,16 +2,11 @@
 import { getIconCollections, iconsPlugin } from "@egoist/tailwindcss-icons"
 
 export default {
+  darkMode: "class",
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {},
-  },
-  shortcuts: {
-    btn: "px-4 py-2 bg-blue-500 text-white rounded-md",
-  },
   plugins: [
     iconsPlugin({
       // Select the icon collections you want to use
