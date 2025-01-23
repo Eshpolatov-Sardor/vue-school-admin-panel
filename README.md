@@ -146,3 +146,5 @@ Run the image and specify port mapping with the `-p` flag.
 ```bash
 docker run --rm -it -p 8080:80 vitesse:latest
 ```
+
+# vue-kurs-admin-panel
