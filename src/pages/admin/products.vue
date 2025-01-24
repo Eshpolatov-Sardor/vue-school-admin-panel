@@ -177,6 +177,7 @@
               <textarea
                 v-model="newClass.description"
                 placeholder="Class Description"
+                rows="10"
                 class="border border-gray-300 rounded px-4 py-2 w-full focus:ring focus:ring-blue-200 focus:outline-none"
               />
               <input
@@ -288,6 +289,7 @@
                 <textarea
                   v-model="tempClassData.description"
                   placeholder="Class Description"
+                  rows="10"
                   class="border border-gray-300 rounded px-4 py-2 w-full focus:ring focus:ring-blue-200 focus:outline-none"
                 />
                 <input

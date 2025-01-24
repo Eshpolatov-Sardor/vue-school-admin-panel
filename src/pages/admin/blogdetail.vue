@@ -231,6 +231,7 @@
                 <textarea
                   v-model="item.text"
                   placeholder="Paragraph Text"
+                  rows="10"
                   class="border border-gray-300 rounded px-4 py-2 w-full focus:ring focus:ring-blue-200 focus:outline-none"
                 />
               </template>
@@ -259,6 +260,7 @@
               <textarea
                 v-model="comment.comment"
                 placeholder="Comment Text"
+                rows="10"
                 class="border border-gray-300 rounded px-4 py-2 w-full focus:ring focus:ring-blue-200 focus:outline-none"
               />
               <label for="commentAvatar" class="block text-sm font-medium text-gray-700">Comment Avatar</label>
@@ -301,6 +303,7 @@
             <textarea
               v-model="tempBlogDetail.authorDescription"
               placeholder="Author Description"
+              rows="10"
               class="border border-gray-300 rounded px-4 py-2 w-full focus:ring focus:ring-blue-200 focus:outline-none"
             />
             <div v-for="(category, index) in tempBlogDetail.categories" :key="index" class="space-y-2">
@@ -357,6 +360,7 @@
             <textarea
               v-model="tempBlogDetail.plainText"
               placeholder="Plain Text"
+              rows="10"
               class="border border-gray-300 rounded px-4 py-2 w-full focus:ring focus:ring-blue-200 focus:outline-none"
             />
             <div class="flex mt-4 gap-2">

@@ -170,6 +170,7 @@
               <textarea
                 v-model="newBlogItem.excerpt"
                 placeholder="Excerpt"
+                rows="10"
                 class="border border-gray-300 rounded px-4 py-2 w-full focus:ring focus:ring-blue-200 focus:outline-none"
               />
               <label for="newBlogImage" class="block text-sm font-medium text-gray-700">Blog Image</label>
@@ -256,6 +257,7 @@
                 <textarea
                   v-model="tempBlogData.excerpt"
                   placeholder="Excerpt"
+                  rows="10"
                   class="border border-gray-300 rounded px-4 py-2 w-full focus:ring focus:ring-blue-200 focus:outline-none"
                 />
                 <label for="blogImage" class="block text-sm font-medium text-gray-700">Blog Image</label>

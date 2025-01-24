@@ -150,7 +150,8 @@
                 <textarea
                   v-model="tempHomeData.texthome"
                   placeholder="Text Home"
-                  class="border border-gray-300 rounded px-4 py-2 w-full"
+                  rows="10"
+                  class="border border-gray-300 rounded px-4 w-full"
                 />
                 <input
                   v-model="tempHomeData.playGround"
